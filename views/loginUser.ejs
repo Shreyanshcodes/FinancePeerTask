@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs'); %>
+        <title>
+            <%= title%>
+        </title>
+</head>
+
+<body>
+
+    <%- include('../partials/nav.ejs',{id:7}); %>
+
+        <div class="ui raised very padded text container segment">
+
+            
+
+                            <h2 class="ui block header">
+                                <div class="content"><i class="arrow alternate circle up icon"></i>
+                                    Welcome to JSON Uploader!
+                                </div>
+                            </h2>
+                            <div class="ui attached message">
+                                <div class="header">
+                                    Login
+                                </div>
+                                <p>Login to your account</p>
+                            </div>
+                            <form class="ui form attached fluid segment" method="POST" action="/api/user/login2">
+                                <div class="field">
+                                    <label>Email</label>
+                                    <input type="email" name="username" id="username" placeholder="Enter Your Email"
+                                        autocomplete="off" required value="user@user.com">
+                                </div>
+                                <div class="field">
+                                    <label>Password</label>
+                                    <input type="password" name="password" id="password" placeholder="Enter Password"
+                                        autocomplete="off" required value="12345678">
+                                </div>
+                               
+                                <input class="ui button" type="submit" value="Login" />
+                            </form>
+                            <div class="ui bottom attached warning message">
+                                <i class="icon help"></i>
+                                Haven't registered yet? &nbsp; <a href="/register"> Register here</a> instead.
+                            </div>
+        </div>
+
+
+        
+     
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<div class="ui secondary pointing menu ">
+  
+    <div class="header item">
+        <i class="file icon"></i>
+    </div>
+    <% if(id==1){%>
+        <a class="active item" href="/">
+            Home
+        </a>
+        <%  } else {%>
+        <a class="item" href="/">
+            Home
+        </a>
+        <%  }%>
+    <div class="right menu">
+
+        <% if(username!=""){%>
+            <div class="item">
+                <div class="ui blue medium label">
+                    <i class="user circle icon"></i>
+                    <%=username%>
+                    <div class="detail">User</div>
+                </div>
+            </div>
+        <div class="item">
+            <a class="ui primary button" href="api/user/logout">LOGOUT </a>
+        </div>
+        <% }else{%>
+        <div class="item">
+            <a class="ui primary button" href="/login">LOGIN </a>
+        </div>
+        <%}%>
+    </div>
+</div>
